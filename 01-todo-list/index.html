@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/JS-Projects/01-todo-list/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/JS-Projects/01-todo-list/Assets/black_clover.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="stats-container">
+        <div id="progress-container">
+          <h2>Todo App</h2>
+          <p>Organize. Prioritize. Achieve</p>
+          <div id="progress-bar">
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="stats-number">
+          <div>0 / 0</div>
+        </div>
+      </div>
+
+      <form action="">
+        <input type="text" placeholder="Write your task" id="task-input" />
+        <button type="submit" id="add-task">+</button>
+      </form>
+
+      <ul id="task-list"></ul>
+    </div>
+
+    <script src="/JS-Projects/01-todo-list/app.js"></script>
+  </body>
+</html>
+
+

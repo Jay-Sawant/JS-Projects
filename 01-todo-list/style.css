@@ -1,0 +1,180 @@
+:root {
+  --background: #000430;
+  --secondaryBackground: #171c48;
+  --text: #fff;
+  --purple: #828dff;
+  --teal: #24feee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  max-width: 500px;
+  margin: 120px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-container {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--purple);
+  border-radius: 20px;
+  width: 100%;
+  gap: 50px;
+}
+
+#progress-container {
+  width: 100%;
+}
+
+#progress-container p {
+  margin-top: 5px;
+}
+
+#progress-bar {
+  height: 10px;
+  width: 100%;
+  background-color: var(--secondaryBackground);
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  background-color: var(--teal);
+  width: 0%;
+  transition: all 0.7s ease;
+}
+
+.stats-number {
+  background-color: var(--purple);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+form input {
+  padding: 17px;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background-color: var(--secondaryBackground);
+  border: 1px solid var(--purple);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+form button {
+  height: 45px;
+  width: 45px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: var(--purple);
+  color: var(--text);
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+#task-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.task-item {
+  background-color: var(--secondaryBackground);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  margin: 5px 0px 5px 0;
+  padding: 7px;
+  word-wrap: break-word; /* Ensures long words break */
+  max-width: 100%;
+}
+
+.task {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;  /* Allow items to wrap */
+  overflow-wrap: break-word;
+  align-items: center;
+}
+
+.task p {
+  margin: 0;  /* Remove default margin from p */
+  word-wrap: break-word; /* Allow long words to break */
+  overflow-wrap: break-word; /* Ensure text fits without overflow */
+  white-space: pre-wrap; /* Allow text wrapping */
+  max-width: calc(100% - 50px); /* Make sure text does not push other elements */
+  flex-grow: 1; /* Allow the paragraph to take up available space */
+}
+
+.task input[type="checkbox"] {
+  height: 17px;
+  width: 17px;
+}
+
+.icon img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: var(--teal);
+}
+
+[contenteditable="true"] {
+  white-space: pre-wrap; /* Allow the text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  overflow-wrap: break-word; /* Prevent overflow of long words */
+  max-width: calc(100% - 200px); /* Prevent overflow beyond container */
+}

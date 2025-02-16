@@ -11,4 +11,4 @@ A simple Todo List application built with JavaScript. This project allows users 
 ## Technologies Used  
 - HTML  
 - CSS  
-- JavaScript
+- JavaScript
